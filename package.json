@@ -1,6 +1,6 @@
 {
   "name": "fakey-json",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "make mock json data easily",
   "repository": "https://github.com/sevenLee/fakey-json",
   "main": "lib/index.js",
