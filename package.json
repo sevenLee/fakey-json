@@ -1,0 +1,48 @@
+{
+  "name": "fakey-json",
+  "version": "1.0.0",
+  "description": "make mock json data easily",
+  "repository": "https://github.com/sevenLee/fakey-json",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "jsnext:main": "es/index.js",
+  "files": [
+    "dist",
+    "lib",
+    "es",
+    "src"
+  ],
+  "scripts": {
+    "prepare": "npm run clean && npm run build",
+    "clean": "rimraf lib dist es",
+    "build": "npm run build:commonjs && npm run build:umd && npm run build:umd:min && npm run build:es",
+    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
+    "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
+    "build:umd": "cross-env BABEL_ENV=es NODE_ENV=development node_modules/.bin/rollup src/index.js --config --sourcemap --output.file dist/fakey-json.js",
+    "build:umd:min": "cross-env BABEL_ENV=es NODE_ENV=production rollup src/index.js --config --output.file dist/fakey-json.min.js"
+  },
+  "author": "seven-lee",
+  "license": "MIT",
+  "peerDependencies": {
+    "numeral": "^2.0.6"
+  },
+  "dependencies": {
+    "numeral": "^2.0.6"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "cross-env": "^5.1.3",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.55.0",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-node-resolve": "^3.0.2",
+    "rollup-plugin-replace": "^2.0.0",
+    "rollup-plugin-uglify": "^3.0.0",
+    "rollup-watch": "^4.3.1"
+  }
+}
