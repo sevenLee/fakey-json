@@ -1,13 +1,13 @@
 <h1>fakey-json 😈</h1>
 
 # Purpose
-You are a smart and proactive Frontend engineer 🤓, you complete your UI components very quickly, so that the APIs is still not ready for client. You don't have correct data to feed the UI components. Finally, You are blocked until the APIs were completed by Backend Engineers. [fakey-json] will resolve the api tasks blocking between Frontend and Backend engineers simply and easily.
-[fakey-json] is a utility for mocking json data of response in client and no need any mock server. 
+You are a smart and proactive Frontend engineer 🤓, you complete your UI components very quickly, so that the APIs is still not ready for client. You don't have correct data to feed the UI components. Finally, You are blocked until the APIs were completed by Backend Engineers. [fakey-json](https://github.com/sevenLee/fakey-json) will resolve the api tasks blocking between Frontend and Backend engineers simply and easily.
+[fakey-json](https://github.com/sevenLee/fakey-json) is a utility for mocking json data of response in client and no need any mock server. 
 
 * **Assign custom JSON pattern for response**: You can pass any custom JSON structure to be the default value.
 * **Assign the response data on any level in JSON**: You can use dot-notation to assign the response data position so quickly.
-* **Fancy high order function pattern implementation**: [fakey-json] base on high order function pattern and return a function as a result that allow you to create new function that can be used as templates.
-* **Choose common format for the value of response property**: [fakey-json] build-in the useful and common formats for response property value.      
+* **Fancy high order function pattern implementation**: [fakey-json](https://github.com/sevenLee/fakey-json) base on high order function pattern and return a function as a result that allow you to create new function that can be used as templates.
+* **Choose common format for the value of response property**: [fakey-json](https://github.com/sevenLee/fakey-json) build-in the useful and common formats for response property value.      
 
 # Installation
 ```bash
