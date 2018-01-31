@@ -1,6 +1,6 @@
 {
   "name": "fakey-json",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "make mock json data easily",
   "repository": "https://github.com/sevenLee/fakey-json",
   "main": "lib/index.js",
@@ -16,10 +16,14 @@
     "prepare": "npm run clean && npm run build",
     "clean": "rimraf lib dist es",
     "build": "npm run build:commonjs && npm run build:umd && npm run build:umd:min && npm run build:es",
+    "build:all:watch": "npm run build:commonjs:watch && npm run build:umd:watch && npm run build:es:watch",
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
+    "build:commonjs:watch": "npm run build:commonjs -- --watch",
     "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
+    "build:es:watch": "npm run build:es -- --watch",
     "build:umd": "cross-env BABEL_ENV=es NODE_ENV=development node_modules/.bin/rollup src/index.js --config --sourcemap --output.file dist/fakey-json.js",
-    "build:umd:min": "cross-env BABEL_ENV=es NODE_ENV=production rollup src/index.js --config --output.file dist/fakey-json.min.js"
+    "build:umd:min": "cross-env BABEL_ENV=es NODE_ENV=production rollup src/index.js --config --output.file dist/fakey-json.min.js",
+    "build:umd:watch": "npm run build:umd -- --watch"
   },
   "author": "seven-lee",
   "license": "MIT",
@@ -35,6 +39,7 @@
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015-rollup": "^3.0.0",
     "cross-env": "^5.1.3",
     "rimraf": "^2.6.2",
     "rollup": "^0.55.0",
